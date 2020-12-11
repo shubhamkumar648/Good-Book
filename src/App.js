@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Welcome {name}! </h1>
+      <h1 style={{ color: "red" }}>Welcome {name}! </h1>
 
       <h3> My Best Author Book</h3>
       <h4> Click Here 👇 </h4>
@@ -31,7 +31,8 @@ export default function App() {
               borderRadius: "0.5rem",
               padding: "0.5rem  1rem",
               border: "1px solid black",
-              margin: "1rem 0.3rem"
+              margin: "1rem 0.3rem",
+              fontSize: "20px"
             }}
           >
             {bookName}{" "}
@@ -39,28 +40,29 @@ export default function App() {
         );
       })}
       <hr />
-
-      {book[list].map((list) => {
-        return (
-          <li
-            key={list.name}
-            style={{
-              listStyle: "none",
-              padding: "1rem",
-              border: "1px solid #D1D5DB",
-              width: "70%",
-              margin: "0 auto",
-              borderRadius: "0.5rem",
-              background: "#E5E7EB"
-            }}
-          >
-            <span style={{ fontSize: "larger" }}>{list.name} </span>
-            <span style={{ fontSize: "smaller" }}>{list.author}</span>
-            {/* <span style={{ fontSize: "larger" }}> {list.name} </span> */}
-            {/* <span style={{ fontSize: "smaller" }}> {list.author} </span> */}
-          </li>
-        );
-      })}
+      <div style={{ textAlign: "left" }}>
+        <ul style={{ paddingInlineStart: "0" }}>
+          {book[list].map((list) => {
+            return (
+              <li
+                key={list.name}
+                style={{
+                  listStyle: "none",
+                  padding: "1rem",
+                  border: "1px solid #D1D5DB",
+                  width: "70%",
+                  margin: "1rem 0rem",
+                  borderRadius: "0.5rem",
+                  background: "#E5E7EB"
+                }}
+              >
+                <div style={{ fontSize: "larger" }}>{list.name} </div>
+                <div style={{ fontSize: "smaller" }}>{list.author}</div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
