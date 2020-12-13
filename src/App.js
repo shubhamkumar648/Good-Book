@@ -17,8 +17,8 @@ export default function App() {
     <div className="App">
       <h1 style={{ color: "red" }}>Welcome {name}! </h1>
 
-      <h3> My Best Author Book</h3>
-      <h4> Click Here 👇 </h4>
+      <h3 style={{ color: "red" }}> My Best Author Book</h3>
+      <h4 style={{ color: "red" }}>Click Here 👇 </h4>
 
       {bookDb.map((bookName) => {
         return (
