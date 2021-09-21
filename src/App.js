@@ -58,6 +58,7 @@ export default function App() {
               >
                 <div style={{ fontSize: "larger" }}>{list.name} </div>
                 <div style={{ fontSize: "smaller" }}>{list.author}</div>
+                <div style={{ fontSize: "smaller" }}>{list.rating}</div>
               </li>
             );
           })}
